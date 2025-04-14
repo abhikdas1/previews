@@ -1,0 +1,48 @@
+:root {
+    /* Primary Colors */
+    --primary-color: #6c5ce7;
+    --primary-rgb: 108, 92, 231;
+    --primary-color-light: #a29bfe;
+    --primary-color-dark: #4834d4;
+    
+    /* Secondary Colors */
+    --secondary-color: #fd79a8;
+    --secondary-rgb: 253, 121, 168;
+    
+    /* Text Colors */
+    --text-color: #2d3436;
+    --text-muted: #636e72;
+    --text-light: #dfe6e9;
+    
+    /* Background Colors */
+    --bg-color: #ffffff;
+    --bg-color-alt: #f9f9f9;
+    --bg-color-dark: #2d3436;
+    
+    /* UI Elements */
+    --card-bg: #ffffff;
+    --input-bg: #f9f9f9;
+    --border-color: #dfe6e9;
+    
+    /* Typography */
+    --font-primary: 'Outfit', sans-serif;
+}
+
+/* Dark Theme Support */
+[data-theme="dark"] {
+    --primary-color: #a29bfe;
+    --primary-color-light: #6c5ce7;
+    --primary-color-dark: #b2bec3;
+    
+    --text-color: #dfe6e9;
+    --text-muted: #b2bec3;
+    --text-light: #f5f6fa;
+    
+    --bg-color: #2d3436;
+    --bg-color-alt: #232929;
+    --bg-color-dark: #1e2022;
+    
+    --card-bg: #232929;
+    --input-bg: #1e2022;
+    --border-color: #636e72;
+}

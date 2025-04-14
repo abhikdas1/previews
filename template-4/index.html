@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows 10 Portfolio | Template 4</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../assets/logo-nobg.png" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="theme.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Desktop -->
+    <div class="desktop">
+        <!-- Desktop Icons -->
+        <div class="desktop-icons">
+            <div class="desktop-icon" data-window="about">
+                <div class="icon-img"><i class="fas fa-user"></i></div>
+                <div class="icon-text">About Me</div>
+            </div>
+            <div class="desktop-icon" data-window="skills">
+                <div class="icon-img"><i class="fas fa-code"></i></div>
+                <div class="icon-text">Skills</div>
+            </div>
+            <div class="desktop-icon" data-window="resume">
+                <div class="icon-img"><i class="fas fa-file-alt"></i></div>
+                <div class="icon-text">Resume</div>
+            </div>
+            <div class="desktop-icon" data-window="portfolio">
+                <div class="icon-img"><i class="fas fa-briefcase"></i></div>
+                <div class="icon-text">Projects</div>
+            </div>
+            <div class="desktop-icon" data-window="services">
+                <div class="icon-img"><i class="fas fa-laptop-code"></i></div>
+                <div class="icon-text">Services</div>
+            </div>
+            <div class="desktop-icon" data-window="contact">
+                <div class="icon-img"><i class="fas fa-envelope"></i></div>
+                <div class="icon-text">Contact</div>
+            </div>
+        </div>
+
+        <!-- Windows -->
+        <div class="windows-container">
+            <!-- About Window -->
+            <div class="window" id="about-window" data-name="about">
+                <div class="window-titlebar">
+                    <div class="window-titlebar-title">
+                        <i class="fas fa-user"></i>
+                        <span>About Me</span>
+                    </div>
+                    <div class="window-titlebar-controls">
+                        <button class="window-minimize"><i class="fas fa-window-minimize"></i></button>
+                        <button class="window-maximize"><i class="fas fa-window-maximize"></i></button>
+                        <button class="window-close"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+                <div class="window-content">
+                    <div class="about-container">
+                        <div class="about-profile">
+                            <div class="profile-picture">
+                                <img id="aboutImage" src="" alt="Profile Picture">
+                            </div>
+                            <div class="profile-details">
+                                <h2 id="aboutName"></h2>
+                                <h3 id="aboutTitle"></h3>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> <span id="aboutLocation"></span></p>
+                            </div>
+                        </div>
+                        <div class="about-content">
+                            <div class="section-title">About Me</div>
+                            <p id="aboutDescription"></p>
+                            <div class="about-details">
+                                <div class="details-row">
+                                    <div class="details-label">Email:</div>
+                                    <div class="details-value" id="aboutEmail"></div>
+                                </div>
+                                <div class="details-row">
+                                    <div class="details-label">Phone:</div>
+                                    <div class="details-value" id="aboutPhone"></div>
+                                </div>
+                                <div class="details-row">
+                                    <div class="details-label">Experience:</div>
+                                    <div class="details-value" id="aboutExperience"></div>
+                                </div>
+                            </div>
+                            <div class="about-social" id="socialLinks"></div>
+                            <div class="about-buttons">
+                                <a href="#" class="win-btn" id="cvButton">
+                                    <i class="fas fa-download"></i>
+                                    Download CV
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="window-statusbar">
+                    <div class="statusbar-left">About Me</div>
+                    <div class="statusbar-right">100%</div>
+                </div>
+            </div>
+
+            <!-- Skills Window -->
+            <div class="window" id="skills-window" data-name="skills">
+                <div class="window-titlebar">
+                    <div class="window-titlebar-title">
+                        <i class="fas fa-code"></i>
+                        <span>Skills</span>
+                    </div>
+                    <div class="window-titlebar-controls">
+                        <button class="window-minimize"><i class="fas fa-window-minimize"></i></button>
+                        <button class="window-maximize"><i class="fas fa-window-maximize"></i></button>
+                        <button class="window-close"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+                <div class="window-content">
+                    <div class="skills-container">
+                        <div class="section-title">My Technical Skills</div>
+                        <div class="skills-grid" id="skillsGrid"></div>
+                    </div>
+                </div>
+                <div class="window-statusbar">
+                    <div class="statusbar-left">Skills</div>
+                    <div class="statusbar-right">6 items</div>
+                </div>
+            </div>
+
+            <!-- Resume Window -->
+            <div class="window" id="resume-window" data-name="resume">
+                <div class="window-titlebar">
+                    <div class="window-titlebar-title">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Resume</span>
+                    </div>
+                    <div class="window-titlebar-controls">
+                        <button class="window-minimize"><i class="fas fa-window-minimize"></i></button>
+                        <button class="window-maximize"><i class="fas fa-window-maximize"></i></button>
+                        <button class="window-close"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+                <div class="window-content">
+                    <div class="resume-container">
+                        <div class="ribbon">
+                            <div class="ribbon-tabs">
+                                <div class="ribbon-tab active" data-tab="experience">Experience</div>
+                                <div class="ribbon-tab" data-tab="education">Education</div>
+                            </div>
+                        </div>
+                        <div class="resume-content">
+                            <div class="resume-tab active" id="experience-tab">
+                                <div class="section-title">Professional Experience</div>
+                                <div class="timeline" id="experienceTimeline"></div>
+                            </div>
+                            <div class="resume-tab" id="education-tab">
+                                <div class="section-title">Education</div>
+                                <div class="timeline" id="educationTimeline"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="window-statusbar">
+                    <div class="statusbar-left">Resume</div>
+                    <div class="statusbar-right">Ready</div>
+                </div>
+            </div>
+
+            <!-- Portfolio Window -->
+            <div class="window" id="portfolio-window" data-name="portfolio">
+                <div class="window-titlebar">
+                    <div class="window-titlebar-title">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Projects</span>
+                    </div>
+                    <div class="window-titlebar-controls">
+                        <button class="window-minimize"><i class="fas fa-window-minimize"></i></button>
+                        <button class="window-maximize"><i class="fas fa-window-maximize"></i></button>
+                        <button class="window-close"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+                <div class="window-content">
+                    <div class="portfolio-container">
+                        <div class="portfolio-header">
+                            <div class="section-title">Recent Projects</div>
+                            <div class="view-options">
+                                <div class="search-box">
+                                    <i class="fas fa-search"></i>
+                                    <input type="text" placeholder="Search projects...">
+                                </div>
+                                <div class="view-buttons">
+                                    <button class="active"><i class="fas fa-th-large"></i></button>
+                                    <button><i class="fas fa-list"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-grid" id="portfolioGrid"></div>
+                    </div>
+                </div>
+                <div class="window-statusbar">
+                    <div class="statusbar-left">Projects</div>
+                    <div class="statusbar-right">6 items</div>
+                </div>
+            </div>
+
+            <!-- Services Window -->
+            <div class="window" id="services-window" data-name="services">
+                <div class="window-titlebar">
+                    <div class="window-titlebar-title">
+                        <i class="fas fa-laptop-code"></i>
+                        <span>Services</span>
+                    </div>
+                    <div class="window-titlebar-controls">
+                        <button class="window-minimize"><i class="fas fa-window-minimize"></i></button>
+                        <button class="window-maximize"><i class="fas fa-window-maximize"></i></button>
+                        <button class="window-close"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+                <div class="window-content">
+                    <div class="services-container">
+                        <div class="section-title">Services I Offer</div>
+                        <div class="services-grid" id="servicesGrid"></div>
+                    </div>
+                </div>
+                <div class="window-statusbar">
+                    <div class="statusbar-left">Services</div>
+                    <div class="statusbar-right">Ready</div>
+                </div>
+            </div>
+
+            <!-- Contact Window -->
+            <div class="window" id="contact-window" data-name="contact">
+                <div class="window-titlebar">
+                    <div class="window-titlebar-title">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </div>
+                    <div class="window-titlebar-controls">
+                        <button class="window-minimize"><i class="fas fa-window-minimize"></i></button>
+                        <button class="window-maximize"><i class="fas fa-window-maximize"></i></button>
+                        <button class="window-close"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+                <div class="window-content">
+                    <div class="contact-container">
+                        <div class="section-title">Get In Touch</div>
+                        <div class="contact-description" id="contactDescription"></div>
+                        <div class="contact-details">
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        <h4>Location</h4>
+                                        <p id="contactLocation"></p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        <h4>Email</h4>
+                                        <p id="contactEmail"></p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        <h4>Phone</h4>
+                                        <p id="contactPhone"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contact-form">
+                                <form id="contactForm">
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <div class="input-group">
+                                            <i class="fas fa-user"></i>
+                                            <input type="text" id="name" name="name" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <div class="input-group">
+                                            <i class="fas fa-envelope"></i>
+                                            <input type="email" id="email" name="email" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="subject">Subject</label>
+                                        <div class="input-group">
+                                            <i class="fas fa-pen"></i>
+                                            <input type="text" id="subject" name="subject" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message">Message</label>
+                                        <div class="input-group textarea-group">
+                                            <i class="fas fa-comment-alt"></i>
+                                            <textarea id="message" name="message" rows="4" required></textarea>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="win-btn">
+                                        <i class="fas fa-paper-plane"></i>
+                                        Send Message
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="window-statusbar">
+                    <div class="statusbar-left">Contact</div>
+                    <div class="statusbar-right">Ready</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Start Menu -->
+        <div class="start-menu" id="startMenu">
+            <div class="start-menu-header">
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <img id="startMenuAvatar" src="" alt="Profile">
+                    </div>
+                    <div class="user-info">
+                        <h3 id="startMenuName"></h3>
+                        <p id="startMenuTitle"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="start-menu-apps">
+                <div class="menu-group">
+                    <div class="menu-title">Portfolio</div>
+                    <div class="menu-items">
+                        <div class="menu-item" data-window="about">
+                            <div class="menu-icon"><i class="fas fa-user"></i></div>
+                            <div class="menu-text">About Me</div>
+                        </div>
+                        <div class="menu-item" data-window="skills">
+                            <div class="menu-icon"><i class="fas fa-code"></i></div>
+                            <div class="menu-text">Skills</div>
+                        </div>
+                        <div class="menu-item" data-window="resume">
+                            <div class="menu-icon"><i class="fas fa-file-alt"></i></div>
+                            <div class="menu-text">Resume</div>
+                        </div>
+                        <div class="menu-item" data-window="portfolio">
+                            <div class="menu-icon"><i class="fas fa-briefcase"></i></div>
+                            <div class="menu-text">Projects</div>
+                        </div>
+                        <div class="menu-item" data-window="services">
+                            <div class="menu-icon"><i class="fas fa-laptop-code"></i></div>
+                            <div class="menu-text">Services</div>
+                        </div>
+                        <div class="menu-item" data-window="contact">
+                            <div class="menu-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="menu-text">Contact</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-group">
+                    <div class="menu-title">Social</div>
+                    <div class="menu-items" id="startMenuSocial">
+                        <!-- Social links will be loaded from user_data.js -->
+                    </div>
+                </div>
+            </div>
+            <div class="start-menu-footer">
+                <div class="power-button">
+                    <i class="fas fa-power-off"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notifications Center -->
+        <div class="notifications-center" id="notificationsCenter">
+            <div class="notifications-header">
+                <h3>Notifications</h3>
+                <button class="clear-all">Clear all</button>
+            </div>
+            <div class="notifications-content">
+                <div class="notification">
+                    <div class="notification-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="notification-content">
+                        <div class="notification-title">Welcome!</div>
+                        <div class="notification-text">This is a Windows 10 themed portfolio template.</div>
+                        <div class="notification-time">Just now</div>
+                    </div>
+                    <div class="notification-close"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="notification">
+                    <div class="notification-icon"><i class="fas fa-info-circle"></i></div>
+                    <div class="notification-content">
+                        <div class="notification-title">Tip</div>
+                        <div class="notification-text">Click on desktop icons or taskbar to open windows.</div>
+                        <div class="notification-time">5 minutes ago</div>
+                    </div>
+                    <div class="notification-close"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="notification">
+                    <div class="notification-icon"><i class="fas fa-star"></i></div>
+                    <div class="notification-content">
+                        <div class="notification-title">Template by ProfileCraft</div>
+                        <div class="notification-text">Check out more templates at profilecraft.live</div>
+                        <div class="notification-time">10 minutes ago</div>
+                    </div>
+                    <div class="notification-close"><i class="fas fa-times"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Taskbar -->
+    <div class="taskbar">
+        <div class="taskbar-left">
+            <div class="start-button" id="startButton">
+                <i class="fab fa-windows"></i>
+            </div>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Type here to search">
+            </div>
+            <div class="taskbar-apps" id="taskbarApps">
+                <!-- Taskbar app icons will be dynamically added -->
+            </div>
+        </div>
+        <div class="taskbar-right">
+            <div class="action-center-button" id="actionCenterButton">
+                <i class="fas fa-comment-alt"></i>
+            </div>
+            <div class="taskbar-icons">
+                <div class="taskbar-icon" id="wifiButton">
+                    <i class="fas fa-wifi"></i>
+                </div>
+                <div class="taskbar-icon" id="volumeButton">
+                    <i class="fas fa-volume-up"></i>
+                </div>
+                <div class="taskbar-icon" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+            </div>
+            <div class="taskbar-info">
+                <div class="taskbar-language">ENG</div>
+                <div class="taskbar-datetime">
+                    <div class="taskbar-time" id="taskbarTime"></div>
+                    <div class="taskbar-date" id="taskbarDate"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WiFi Panel -->
+    <div class="system-panel wifi-panel" id="wifiPanel">
+        <div class="panel-header">
+            <h3>Wi-Fi</h3>
+        </div>
+        <div class="panel-content">
+            <div class="toggle-container">
+                <span>Wi-Fi</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" checked id="wifiToggle">
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+            <div class="wifi-networks">
+                <div class="wifi-network connected">
+                    <div class="wifi-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <div class="wifi-details">
+                        <div class="wifi-name">Home Network</div>
+                        <div class="wifi-status">Connected, secured</div>
+                    </div>
+                </div>
+                <div class="wifi-network">
+                    <div class="wifi-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <div class="wifi-details">
+                        <div class="wifi-name">Office Network</div>
+                        <div class="wifi-status">Secured</div>
+                    </div>
+                </div>
+                <div class="wifi-network">
+                    <div class="wifi-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <div class="wifi-details">
+                        <div class="wifi-name">Coffeeshop WiFi</div>
+                        <div class="wifi-status">Open network</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Volume Panel -->
+    <div class="system-panel volume-panel" id="volumePanel">
+        <div class="panel-header">
+            <h3>Volume</h3>
+        </div>
+        <div class="panel-content">
+            <div class="volume-slider-container">
+                <i class="fas fa-volume-down"></i>
+                <input type="range" min="0" max="100" value="50" class="volume-slider" id="volumeSlider">
+                <i class="fas fa-volume-up"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Power Options Panel -->
+    <div class="system-panel power-panel" id="powerPanel">
+        <div class="panel-header">
+            <h3>Power Options</h3>
+        </div>
+        <div class="panel-content">
+            <div class="power-options">
+                <div class="power-option" id="sleepOption">
+                    <i class="fas fa-moon"></i>
+                    <span>Sleep</span>
+                </div>
+                <div class="power-option" id="shutdownOption">
+                    <i class="fas fa-power-off"></i>
+                    <span>Shut down</span>
+                </div>
+                <div class="power-option" id="restartOption">
+                    <i class="fas fa-redo"></i>
+                    <span>Restart</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Boot Screen -->
+    <div class="boot-screen" id="bootScreen">
+        <div class="boot-logo">
+            <i class="fab fa-windows"></i>
+        </div>
+        <div class="boot-spinner"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="user_data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

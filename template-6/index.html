@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubuntu Portfolio | Template 6</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../assets/logo-nobg.png" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Ubuntu -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="theme.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="ubuntu-loading" id="loadingScreen">
+        <div class="ubuntu-loader">
+            <div class="ubuntu-logo">
+                <span class="dot dot-1"></span>
+                <span class="dot dot-2"></span>
+                <span class="dot dot-3"></span>
+                <span class="dot dot-4"></span>
+            </div>
+            <div class="ubuntu-text">Ubuntu</div>
+            <div class="loading-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Screen -->
+    <div class="ubuntu-login" id="loginScreen">
+        <div class="login-background"></div>
+        <div class="login-panel">
+            <div class="login-user">
+                <img src="assets/avatar.jpg" alt="User" id="loginAvatar">
+                <h2 id="loginName">Ubuntu User</h2>
+            </div>
+            <div class="password-field">
+                <input type="password" placeholder="Password" id="passwordField">
+                <button id="loginButton"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+        <div class="login-footer">
+            <div class="login-actions">
+                <button class="action-button" id="restartButton"><i class="fas fa-redo"></i></button>
+                <button class="action-button" id="shutdownButton"><i class="fas fa-power-off"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Desktop Environment -->
+    <div class="ubuntu-desktop" id="desktop">
+        <!-- Top Panel -->
+        <div class="top-panel">
+            <div class="activities-button" id="activitiesButton">Activities</div>
+            <div class="top-menu">
+                <div class="app-title" id="currentAppTitle">Ubuntu Desktop</div>
+                <div class="app-menu" id="appMenu"></div>
+            </div>
+            <div class="top-right">
+                <div class="indicator" id="networkIndicator"><i class="fas fa-wifi"></i></div>
+                <div class="indicator" id="volumeIndicator"><i class="fas fa-volume-up"></i></div>
+                <div class="indicator" id="batteryIndicator"><i class="fas fa-battery-full"></i> 100%</div>
+                <div class="datetime-indicator" id="datetimeIndicator">
+                    <span class="time">12:00 PM</span>
+                    <span class="date">Jan 1</span>
+                </div>
+                <div class="session-indicator" id="sessionIndicator">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dock -->
+        <div class="ubuntu-dock">
+            <div class="dock-icon" id="dashIcon">
+                <i class="fab fa-ubuntu"></i>
+                <div class="dock-tooltip">Ubuntu Dash</div>
+            </div>
+            <div class="dock-icon" data-window="about">
+                <i class="fas fa-user"></i>
+                <div class="dock-tooltip">About Me</div>
+            </div>
+            <div class="dock-icon" data-window="terminal">
+                <i class="fas fa-terminal"></i>
+                <div class="dock-tooltip">Terminal</div>
+            </div>
+            <div class="dock-icon" data-window="skills">
+                <i class="fas fa-code"></i>
+                <div class="dock-tooltip">Skills</div>
+            </div>
+            <div class="dock-icon" data-window="resume">
+                <i class="fas fa-file-alt"></i>
+                <div class="dock-tooltip">Resume</div>
+            </div>
+            <div class="dock-icon" data-window="projects">
+                <i class="fas fa-briefcase"></i>
+                <div class="dock-tooltip">Projects</div>
+            </div>
+            <div class="dock-icon" data-window="softwarecenter">
+                <i class="fas fa-laptop-code"></i>
+                <div class="dock-tooltip">Services</div>
+            </div>
+            <div class="dock-icon" data-window="contact">
+                <i class="fas fa-envelope"></i>
+                <div class="dock-tooltip">Contact</div>
+            </div>
+            <div class="dock-icon" data-window="settings">
+                <i class="fas fa-cog"></i>
+                <div class="dock-tooltip">Settings</div>
+            </div>
+            <div class="dock-separator"></div>
+            <div class="dock-icon" id="trashIcon">
+                <i class="fas fa-trash"></i>
+                <div class="dock-tooltip">Trash</div>
+            </div>
+        </div>
+
+        <!-- Windows Container -->
+        <div class="windows-container">
+            <!-- About Window -->
+            <div class="ubuntu-window" id="about-window" data-name="about">
+                <div class="window-header">
+                    <div class="window-controls">
+                        <button class="control close"><i class="fas fa-times"></i></button>
+                        <button class="control minimize"><i class="fas fa-minus"></i></button>
+                        <button class="control maximize"><i class="fas fa-square"></i></button>
+                    </div>
+                    <div class="window-title">About Me</div>
+                </div>
+                <div class="window-content">
+                    <div class="about-container ubuntu-scrollbar">
+                        <div class="about-header">
+                            <img id="aboutImage" src="assets/avatar.jpg" alt="Profile Picture">
+                            <div class="about-header-info">
+                                <h1 id="aboutName">Ubuntu User</h1>
+                                <h2 id="aboutTitle">Professional Title</h2>
+                                <div class="about-location"><i class="fas fa-map-marker-alt"></i> <span id="aboutLocation">Location</span></div>
+                            </div>
+                        </div>
+                        
+                        <div class="about-tabs">
+                            <div class="tab active" data-tab="bio">Biography</div>
+                            <div class="tab" data-tab="details">Details</div>
+                            <div class="tab" data-tab="social">Social</div>
+                        </div>
+                        
+                        <div class="tab-content active" id="bio-tab">
+                            <p id="aboutDescription">Loading biography...</p>
+                            <div class="about-actions">
+                                <button class="ubuntu-button" id="cvButton">
+                                    <i class="fas fa-download"></i>
+                                    Download CV
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-content" id="details-tab">
+                            <ul class="details-list">
+                                <li>
+                                    <strong>Full Name:</strong>
+                                    <span id="aboutFullName">Full Name</span>
+                                </li>
+                                <li>
+                                    <strong>Email:</strong>
+                                    <span id="aboutEmail">email@example.com</span>
+                                </li>
+                                <li>
+                                    <strong>Phone:</strong>
+                                    <span id="aboutPhone">+1234567890</span>
+                                </li>
+                                <li>
+                                    <strong>Experience:</strong>
+                                    <span id="aboutExperience">0 Years</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-content" id="social-tab">
+                            <div class="social-grid" id="socialLinks"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Terminal Window -->
+            <div class="ubuntu-window" id="terminal-window" data-name="terminal">
+                <div class="window-header">
+                    <div class="window-controls">
+                        <button class="control close"><i class="fas fa-times"></i></button>
+                        <button class="control minimize"><i class="fas fa-minus"></i></button>
+                        <button class="control maximize"><i class="fas fa-square"></i></button>
+                    </div>
+                    <div class="window-title">Terminal</div>
+                </div>
+                <div class="window-content terminal-content">
+                    <div class="terminal ubuntu-scrollbar">
+                        <div class="terminal-output">
+                            <div class="terminal-line">Welcome to Ubuntu 22.04 LTS (GNU/Linux 5.15.0-83-generic x86_64)</div>
+                            <div class="terminal-line">Type 'help' for available commands.</div>
+                            <div class="terminal-line terminal-prompt">
+                                <span class="user-host">user@ubuntu</span>:<span class="directory">~</span>$
+                                <span class="command">whoami</span>
+                            </div>
+                            <div class="terminal-line" id="terminalName">user</div>
+                            <div class="terminal-line terminal-prompt">
+                                <span class="user-host">user@ubuntu</span>:<span class="directory">~</span>$
+                                <span class="command">ls -la</span>
+                            </div>
+                            <div class="terminal-line">total 40</div>
+                            <div class="terminal-line">drwxr-xr-x 2 user user 4096 Feb 10 12:34 .</div>
+                            <div class="terminal-line">drwxr-xr-x 4 user user 4096 Feb 10 12:34 ..</div>
+                            <div class="terminal-line">-rw-r--r-- 1 user user 220 Feb 10 12:34 .bash_logout</div>
+                            <div class="terminal-line">-rw-r--r-- 1 user user 3771 Feb 10 12:34 .bashrc</div>
+                            <div class="terminal-line">drwx------ 2 user user 4096 Feb 10 12:34 .cache</div>
+                            <div class="terminal-line">drwxr-xr-x 3 user user 4096 Feb 10 12:34 Documents</div>
+                            <div class="terminal-line">drwxr-xr-x 2 user user 4096 Feb 10 12:34 Downloads</div>
+                            <div class="terminal-line">drwxr-xr-x 2 user user 4096 Feb 10 12:34 Pictures</div>
+                            <div class="terminal-line">drwxr-xr-x 2 user user 4096 Feb 10 12:34 Projects</div>
+                            <div class="terminal-line terminal-prompt">
+                                <span class="user-host">user@ubuntu</span>:<span class="directory">~</span>$
+                                <span class="command">cat skills.txt</span>
+                            </div>
+                            <div class="terminal-line" id="terminal-skills">Loading skills...</div>
+                            <div class="terminal-line terminal-prompt">
+                                <span class="user-host">user@ubuntu</span>:<span class="directory">~</span>$
+                                <span class="cursor"></span>
+                            </div>
+                        </div>
+                        <div class="terminal-input">
+                            <form id="terminalForm">
+                                <input type="text" id="terminalCommand" autocomplete="off">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Skills Window -->
+            <div class="ubuntu-window" id="skills-window" data-name="skills">
+                <div class="window-header">
+                    <div class="window-controls">
+                        <button class="control close"><i class="fas fa-times"></i></button>
+                        <button class="control minimize"><i class="fas fa-minus"></i></button>
+                        <button class="control maximize"><i class="fas fa-square"></i></button>
+                    </div>
+                    <div class="window-title">Skills</div>
+                </div>
+                <div class="window-content">
+                    <div class="skills-container ubuntu-scrollbar">
+                        <div class="search-container">
+                            <input type="text" placeholder="Search skills..." id="skillSearch">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="skills-grid" id="skillsGrid"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Resume Window -->
+            <div class="ubuntu-window" id="resume-window" data-name="resume">
+                <div class="window-header">
+                    <div class="window-controls">
+                        <button class="control close"><i class="fas fa-times"></i></button>
+                        <button class="control minimize"><i class="fas fa-minus"></i></button>
+                        <button class="control maximize"><i class="fas fa-square"></i></button>
+                    </div>
+                    <div class="window-title">Resume</div>
+                </div>
+                <div class="window-content">
+                    <div class="resume-container ubuntu-scrollbar">
+                        <div class="resume-tabs">
+                            <div class="resume-tab active" data-tab="experience">
+                                <i class="fas fa-briefcase"></i>
+                                <span>Experience</span>
+                            </div>
+                            <div class="resume-tab" data-tab="education">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Education</span>
+                            </div>
+                        </div>
+                        <div class="resume-content">
+                            <div class="resume-tab-content active" id="experience-tab">
+                                <div id="experienceTimeline" class="timeline"></div>
+                            </div>
+                            <div class="resume-tab-content" id="education-tab">
+                                <div id="educationTimeline" class="timeline"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Projects Window -->
+            <div class="ubuntu-window" id="projects-window" data-name="projects">
+                <div class="window-header">
+                    <div class="window-controls">
+                        <button class="control close"><i class="fas fa-times"></i></button>
+                        <button class="control minimize"><i class="fas fa-minus"></i></button>
+                        <button class="control maximize"><i class="fas fa-square"></i></button>
+                    </div>
+                    <div class="window-title">Projects</div>
+                </div>
+                <div class="window-content">
+                    <div class="projects-container ubuntu-scrollbar">
+                        <div class="projects-header">
+                            <div class="projects-search">
+                                <input type="text" placeholder="Search projects..." id="projectSearch">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="view-options">
+                                <button class="view-option active" data-view="grid"><i class="fas fa-th"></i></button>
+                                <button class="view-option" data-view="list"><i class="fas fa-list"></i></button>
+                            </div>
+                        </div>
+                        <div class="filter-chips" id="projectFilters">
+                            <div class="filter-chip active" data-filter="all">All</div>
+                        </div>
+                        <div class="projects-grid" id="projectsGrid"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Software Center (Services) Window -->
+            <div class="ubuntu-window" id="softwarecenter-window" data-name="softwarecenter">
+                <div class="window-header">
+                    <div class="window-controls">
+                        <button class="control close"><i class="fas fa-times"></i></button>
+                        <button class="control minimize"><i class="fas fa-minus"></i></button>
+                        <button class="control maximize"><i class="fas fa-square"></i></button>
+                    </div>
+                    <div class="window-title">Ubuntu Software</div>
+                </div>
+                <div class="window-content">
+                    <div class="software-container ubuntu-scrollbar">
+                        <div class="software-header">
+                            <div class="software-search">
+                                <input type="text" placeholder="Search services..." id="serviceSearch">
+                                <i class="fas fa-search"></i>
+                            </div>
+                        </div>
+                        <div class="software-categories">
+                            <div class="category active">All</div>
+                            <div class="category">Development</div>
+                            <div class="category">Design</div>
+                            <div class="category">Marketing</div>
+                            <div class="category">Consulting</div>
+                        </div>
+                        <div class="software-grid" id="servicesGrid"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Window -->
+            <div class="ubuntu-window" id="contact-window" data-name="contact">
+                <div class="window-header">
+                    <div class="window-controls">
+                        <button class="control close"><i class="fas fa-times"></i></button>
+                        <button class="control minimize"><i class="fas fa-minus"></i></button>
+                        <button class="control maximize"><i class="fas fa-square"></i></button>
+                    </div>
+                    <div class="window-title">Contact</div>
+                </div>
+                <div class="window-content">
+                    <div class="contact-container ubuntu-scrollbar">
+                        <div class="contact-info">
+                            <h2>Get in Touch</h2>
+                            <p id="contactDescription">Feel free to contact me for any inquiries or opportunities.</p>
+                            <div class="contact-details">
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        <h3>Email</h3>
+                                        <p id="contactEmail">email@example.com</p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        <h3>Phone</h3>
+                                        <p id="contactPhone">+1234567890</p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        <h3>Location</h3>
+                                        <p id="contactLocation">Location</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-form-container">
+                            <h2>Send a Message</h2>
+                            <form id="contactForm" class="contact-form">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <input type="text" id="subject" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="ubuntu-button">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Settings Window -->
+            <div class="ubuntu-window" id="settings-window" data-name="settings">
+                <div class="window-header">
+                    <div class="window-controls">
+                        <button class="control close"><i class="fas fa-times"></i></button>
+                        <button class="control minimize"><i class="fas fa-minus"></i></button>
+                        <button class="control maximize"><i class="fas fa-square"></i></button>
+                    </div>
+                    <div class="window-title">Settings</div>
+                </div>
+                <div class="window-content">
+                    <div class="settings-container ubuntu-scrollbar">
+                        <div class="settings-sidebar">
+                            <div class="settings-nav">
+                                <div class="settings-nav-item active" data-settings="appearance">
+                                    <i class="fas fa-paint-brush"></i>
+                                    <span>Appearance</span>
+                                </div>
+                                <div class="settings-nav-item" data-settings="privacy">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Privacy</span>
+                                </div>
+                                <div class="settings-nav-item" data-settings="about">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span>About</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="settings-content">
+                            <div class="settings-pane active" id="appearance-pane">
+                                <h2>Appearance</h2>
+                                <div class="settings-section">
+                                    <h3>Theme</h3>
+                                    <div class="theme-options">
+                                        <div class="theme-option active" data-theme="light">
+                                            <div class="theme-preview light"></div>
+                                            <span>Light</span>
+                                        </div>
+                                        <div class="theme-option" data-theme="dark">
+                                            <div class="theme-preview dark"></div>
+                                            <span>Dark</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="settings-section">
+                                    <h3>Accent Color</h3>
+                                    <div class="color-options">
+                                        <div class="color-option active" data-color="orange" style="background-color: #E95420;"></div>
+                                        <div class="color-option" data-color="purple" style="background-color: #772953;"></div>
+                                        <div class="color-option" data-color="blue" style="background-color: #0073E5;"></div>
+                                        <div class="color-option" data-color="green" style="background-color: #0E8420;"></div>
+                                    </div>
+                                </div>
+                                <div class="settings-section">
+                                    <h3>Wallpaper</h3>
+                                    <div class="wallpaper-options">
+                                        <div class="wallpaper-option active" data-wallpaper="bg1">
+                                            <img src="assets/bg1.jpg" alt="Wallpaper 1">
+                                        </div>
+                                        <div class="wallpaper-option" data-wallpaper="bg2">
+                                            <img src="assets/bg2.jpg" alt="Wallpaper 2">
+                                        </div>
+                                        <div class="wallpaper-option" data-wallpaper="bg3">
+                                            <img src="assets/bg3.jpg" alt="Wallpaper 3">
+                                        </div>
+                                        <div class="wallpaper-option" data-wallpaper="bg4">
+                                            <img src="assets/bg4.jpg" alt="Wallpaper 4">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="settings-pane" id="privacy-pane">
+                                <h2>Privacy</h2>
+                                <div class="settings-section">
+                                    <h3>Screen Lock</h3>
+                                    <div class="privacy-option">
+                                        <div class="option-label">Automatic Screen Lock</div>
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="privacy-option">
+                                        <div class="option-label">Lock Screen Notifications</div>
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="settings-section">
+                                    <h3>Usage Data</h3>
+                                    <div class="privacy-option">
+                                        <div class="option-label">Send Usage Data</div>
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="settings-pane" id="about-pane">
+                                <h2>About</h2>
+                                <div class="about-ubuntu">
+                                    <img src="assets/ubuntu-logo.png" alt="Ubuntu Logo">
+                                    <h3>Ubuntu Portfolio Template</h3>
+                                    <p>Version 1.0</p>
+                                    <p>Based on Ubuntu 22.04 LTS</p>
+                                    <p>© 2025 ProfileCraft</p>
+                                    <p><a href="https://profilecraft.live" target="_blank">Visit ProfileCraft</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Activities Overview -->
+        <div class="activities-overview" id="activitiesOverview">
+            <div class="search-container">
+                <input type="text" placeholder="Type to search..." id="activitiesSearch">
+            </div>
+            <div class="workspace-preview">
+                <div class="workspace-thumbnail" id="workspaceThumbnail"></div>
+                <div class="workspace-name">Workspace</div>
+            </div>
+            <div class="app-grid" id="appGrid">
+                <div class="app-item" data-window="about">
+                    <div class="app-icon"><i class="fas fa-user"></i></div>
+                    <div class="app-name">About Me</div>
+                </div>
+                <div class="app-item" data-window="terminal">
+                    <div class="app-icon"><i class="fas fa-terminal"></i></div>
+                    <div class="app-name">Terminal</div>
+                </div>
+                <div class="app-item" data-window="skills">
+                    <div class="app-icon"><i class="fas fa-code"></i></div>
+                    <div class="app-name">Skills</div>
+                </div>
+                <div class="app-item" data-window="resume">
+                    <div class="app-icon"><i class="fas fa-file-alt"></i></div>
+                    <div class="app-name">Resume</div>
+                </div>
+                <div class="app-item" data-window="projects">
+                    <div class="app-icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="app-name">Projects</div>
+                </div>
+                <div class="app-item" data-window="softwarecenter">
+                    <div class="app-icon"><i class="fas fa-laptop-code"></i></div>
+                    <div class="app-name">Services</div>
+                </div>
+                <div class="app-item" data-window="contact">
+                    <div class="app-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="app-name">Contact</div>
+                </div>
+                <div class="app-item" data-window="settings">
+                    <div class="app-icon"><i class="fas fa-cog"></i></div>
+                    <div class="app-name">Settings</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Notification Center -->
+        <div class="notification-center" id="notificationCenter">
+            <div class="notification-header">
+                <h3>Notifications</h3>
+                <button class="clear-all" id="clearNotifications">Clear All</button>
+            </div>
+            <div class="notifications-container" id="notificationsContainer">
+                <div class="notification-item">
+                    <div class="notification-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="notification-content">
+                        <div class="notification-title">Welcome to Ubuntu Portfolio</div>
+                        <div class="notification-message">Click around to explore this template</div>
+                        <div class="notification-time">Just now</div>
+                    </div>
+                    <button class="notification-close"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="notification-item">
+                    <div class="notification-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="notification-content">
+                        <div class="notification-title">Template by ProfileCraft</div>
+                        <div class="notification-message">More templates available at profilecraft.live</div>
+                        <div class="notification-time">5 minutes ago</div>
+                    </div>
+                    <button class="notification-close"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- System Controls -->
+        <div class="system-controls" id="systemControls">
+            <div class="controls-container">
+                <div class="system-menu">
+                    <div class="menu-header">
+                        <h3 id="systemUserName">Ubuntu User</h3>
+                        <span id="systemUserEmail">user@example.com</span>
+                    </div>
+                    <div class="menu-separator"></div>
+                    <div class="menu-item">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fas fa-lock"></i>
+                        <span>Lock</span>
+                    </div>
+                    <div class="menu-separator"></div>
+                    <div class="menu-item" id="logoutButton">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Log Out</span>
+                    </div>
+                    <div class="menu-item" id="restartMenuButton">
+                        <i class="fas fa-redo-alt"></i>
+                        <span>Restart</span>
+                    </div>
+                    <div class="menu-item" id="shutdownMenuButton">
+                        <i class="fas fa-power-off"></i>
+                        <span>Shut Down</span>
+                    </div>
+                </div>
+                <div class="controls-section">
+                    <h3>System</h3>
+                    <div class="controls-grid">
+                        <div class="control-item">
+                            <div class="control-label">Wi-Fi</div>
+                            <label class="switch">
+                                <input type="checkbox" checked id="wifiToggle">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="control-item">
+                            <div class="control-label">Bluetooth</div>
+                            <label class="switch">
+                                <input type="checkbox" id="bluetoothToggle">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="control-item">
+                            <div class="control-label">Airplane Mode</div>
+                            <label class="switch">
+                                <input type="checkbox" id="airplaneToggle">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="control-item">
+                            <div class="control-label">Night Light</div>
+                            <label class="switch">
+                                <input type="checkbox" id="nightLightToggle">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="volume-control">
+                    <div class="volume-icon">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <input type="range" min="0" max="100" value="75" class="volume-slider" id="volumeSlider">
+                </div>
+                <div class="brightness-control">
+                    <div class="brightness-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <input type="range" min="0" max="100" value="90" class="brightness-slider" id="brightnessSlider">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right-Click Menu -->
+    <div class="context-menu" id="contextMenu">
+        <div class="menu-item" data-action="new-folder">
+            <i class="fas fa-folder-plus"></i>
+            <span>New Folder</span>
+        </div>
+        <div class="menu-item" data-action="new-document">
+            <i class="fas fa-file"></i>
+            <span>New Document</span>
+        </div>
+        <div class="menu-separator"></div>
+        <div class="menu-item" data-action="paste">
+            <i class="fas fa-paste"></i>
+            <span>Paste</span>
+        </div>
+        <div class="menu-separator"></div>
+        <div class="menu-item" data-action="select-all">
+            <i class="fas fa-check-square"></i>
+            <span>Select All</span>
+        </div>
+        <div class="menu-separator"></div>
+        <div class="menu-item" data-action="change-background">
+            <i class="fas fa-image"></i>
+            <span>Change Background</span>
+        </div>
+        <div class="menu-item" data-action="open-settings">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="user_data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

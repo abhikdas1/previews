@@ -1,0 +1,106 @@
+:root {
+    /* Light Theme Variables */
+    --bg-color: #f6f6f6;
+    --text-color: #333333;
+    --text-secondary: #666666;
+    --text-tertiary: #999999;
+    --accent-color: #E95420;  /* Ubuntu Orange */
+    --accent-hover: #dd4814;
+    --accent-light: rgba(233, 84, 32, 0.1);
+    
+    --border-color: #dedede;
+    --card-bg: #ffffff;
+    --panel-bg: rgba(255, 255, 255, 0.85);
+    --panel-hover: rgba(0, 0, 0, 0.05);
+    --dock-bg: rgba(255, 255, 255, 0.7);
+    --dock-border: rgba(255, 255, 255, 0.2);
+    --dock-separator: rgba(0, 0, 0, 0.15);
+    --window-bg: rgba(255, 255, 255, 0.95);
+    --window-border: rgba(0, 0, 0, 0.1);
+    --window-header: rgba(255, 255, 255, 0.9);
+    --window-content: #ffffff;
+    --window-title: #333333;
+    
+    --input-bg: #ffffff;
+    --input-text: #333333;
+    --tooltip-bg: rgba(0, 0, 0, 0.8);
+    --app-icon-bg: #444444;
+    --activities-bg: rgba(0, 0, 0, 0.65);
+    
+    --tab-hover: rgba(0, 0, 0, 0.05);
+    --switch-bg: #cccccc;
+    --slider-track: #e0e0e0;
+    
+    --loading-bg: #300a24;
+    --login-bg: #2c001e;
+    --login-panel-bg: rgba(255, 255, 255, 0.15);
+    
+    --terminal-bg: #300a24;
+    --terminal-text: #ffffff;
+    --terminal-green: #4e9a06;
+    --terminal-blue: #3465a4;
+    --terminal-white: #d3d7cf;
+    --terminal-cursor: #ffffff;
+    
+    --scrollbar-track: #f1f1f1;
+    --scrollbar-thumb: #c1c1c1;
+    --scrollbar-thumb-hover: #a8a8a8;
+}
+
+/* Dark Theme Variables */
+body.dark-theme {
+    --bg-color: #1f1f1f;
+    --text-color: #e6e6e6;
+    --text-secondary: #b3b3b3;
+    --text-tertiary: #808080;
+    
+    --border-color: #383838;
+    --card-bg: #2d2d2d;
+    --panel-bg: rgba(45, 45, 45, 0.85);
+    --panel-hover: rgba(255, 255, 255, 0.1);
+    --dock-bg: rgba(45, 45, 45, 0.7);
+    --dock-border: rgba(0, 0, 0, 0.3);
+    --dock-separator: rgba(255, 255, 255, 0.15);
+    --window-bg: rgba(45, 45, 45, 0.95);
+    --window-border: rgba(0, 0, 0, 0.3);
+    --window-header: rgba(45, 45, 45, 0.9);
+    --window-content: #2d2d2d;
+    --window-title: #e6e6e6;
+    
+    --input-bg: #363636;
+    --input-text: #e6e6e6;
+    --tooltip-bg: rgba(0, 0, 0, 0.9);
+    
+    --tab-hover: rgba(255, 255, 255, 0.05);
+    --switch-bg: #555555;
+    --slider-track: #555555;
+    
+    --scrollbar-track: #2c2c2c;
+    --scrollbar-thumb: #5a5a5a;
+    --scrollbar-thumb-hover: #7a7a7a;
+}
+
+/* Accent Colors */
+body[data-accent="orange"] {
+    --accent-color: #E95420;
+    --accent-hover: #dd4814;
+    --accent-light: rgba(233, 84, 32, 0.1);
+}
+
+body[data-accent="purple"] {
+    --accent-color: #772953;
+    --accent-hover: #5e2043;
+    --accent-light: rgba(119, 41, 83, 0.1);
+}
+
+body[data-accent="blue"] {
+    --accent-color: #0073E5;
+    --accent-hover: #0061c1;
+    --accent-light: rgba(0, 115, 229, 0.1);
+}
+
+body[data-accent="green"] {
+    --accent-color: #0E8420;
+    --accent-hover: #0b6e1a;
+    --accent-light: rgba(14, 132, 32, 0.1);
+}

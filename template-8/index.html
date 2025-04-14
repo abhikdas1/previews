@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template 8 - Elegant Portfolio</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../assets/logo-nobg.png" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Mobile Sidebar Toggle -->
+    <div class="mobile-toggle" id="mobileToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+    <!-- Sidebar Overlay for Mobile -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Left Navigation Panel -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="profile-image">
+                    <img src="assets/avatar.jpg" alt="Profile" id="profileImage">
+                </div>
+                <h2 class="profile-name" id="profileName">John Doe</h2>
+                <p class="profile-title" id="profileTitle">Web Developer</p>
+                <div class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> <span>About</span></a></li>
+                    <li><a href="#skills" class="nav-link"><i class="fas fa-cogs"></i> <span>Skills</span></a></li>
+                    <li><a href="#resume" class="nav-link"><i class="fas fa-file-alt"></i> <span>Resume</span></a></li>
+                    <li><a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i> <span>Projects</span></a></li>
+                    <li><a href="#services" class="nav-link"><i class="fas fa-server"></i> <span>Services</span></a></li>
+                    <li><a href="#testimonials" class="nav-link"><i class="fas fa-quote-right"></i> <span>Testimonials</span></a></li>
+                    <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> <span>Contact</span></a></li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+                <p class="copyright">&copy; 2025. All Rights Reserved.</p>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section id="home" class="section active">
+                <div class="hero">
+                    <h1 class="hero-title">Hi, I'm <span id="heroName">John Doe</span></h1>
+                    <h2 class="hero-subtitle" id="heroTitle">Professional Web Developer</h2>
+                    <p class="hero-description" id="heroDescription">I create stunning web solutions that help businesses grow online.</p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">Hire Me</a>
+                        <a href="#" class="btn btn-secondary" id="downloadCV">Download CV</a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- About Section -->
+            <section id="about" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="about-container">
+                    <div class="about-image">
+                        <img src="assets/about-image.jpg" alt="About Me" id="aboutImage">
+                    </div>
+                    <div class="about-content">
+                        <h3>Who am I?</h3>
+                        <p id="aboutDescription">I am a passionate web developer with over 5 years of experience creating responsive websites and web applications. I specialize in frontend development with React and backend development with Node.js. I am always eager to learn new technologies and improve my skills.</p>
+                        
+                        <div class="about-info">
+                            <div class="info-item">
+                                <span class="info-label">Name:</span>
+                                <span class="info-value" id="infoName">John Doe</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Email:</span>
+                                <span class="info-value" id="infoEmail">john.doe@example.com</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Phone:</span>
+                                <span class="info-value" id="infoPhone">(123) 456-7890</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Location:</span>
+                                <span class="info-value" id="infoLocation">New York, USA</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Experience:</span>
+                                <span class="info-value" id="infoExperience">5 Years</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Freelance:</span>
+                                <span class="info-value">Available</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Skills Section -->
+            <section id="skills" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">My Skills</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="skills-container" id="skillsContainer">
+                    <!-- Skills will be populated from user_data.js -->
+                </div>
+            </section>
+            
+            <!-- Resume Section -->
+            <section id="resume" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Resume</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="resume-container">
+                    <div class="resume-tabs">
+                        <button class="tab-btn active" data-tab="experience">Experience</button>
+                        <button class="tab-btn" data-tab="education">Education</button>
+                    </div>
+                    <div class="resume-content">
+                        <div class="tab-content active" id="experience-tab">
+                            <div class="timeline" id="experienceTimeline">
+                                <!-- Experience items will be populated from user_data.js -->
+                            </div>
+                        </div>
+                        <div class="tab-content" id="education-tab">
+                            <div class="timeline" id="educationTimeline">
+                                <!-- Education items will be populated from user_data.js -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Projects Section -->
+            <section id="projects" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">My Projects</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web Design</button>
+                    <button class="filter-btn" data-filter="app">App Development</button>
+                    <button class="filter-btn" data-filter="graphic">Graphic Design</button>
+                </div>
+                <div class="projects-container" id="projectsContainer">
+                    <!-- Projects will be populated from user_data.js -->
+                </div>
+            </section>
+            
+            <!-- Services Section -->
+            <section id="services" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">My Services</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="services-container" id="servicesContainer">
+                    <!-- Services will be populated from user_data.js -->
+                </div>
+            </section>
+            
+            <!-- Testimonials Section -->
+            <section id="testimonials" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Testimonials</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="testimonials-container">
+                    <div class="swiper-container" id="testimonialsSwiper">
+                        <div class="testimonials-wrapper" id="testimonialsWrapper">
+                            <!-- Testimonials will be populated from user_data.js -->
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Contact Section -->
+            <section id="contact" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Contact Me</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Location</h4>
+                                <p id="contactLocation">New York, USA</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p id="contactEmail">john.doe@example.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <p id="contactPhone">(123) 456-7890</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-wrapper">
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <input type="text" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Subject" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="Your Message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Footer -->
+            <footer class="footer">
+                <p>&copy; 2025 Designed and Developed by <span class="primary-color" id="footerName">John Doe</span></p>
+                <a href="../../index.html" class="back-link">Back to ProfileCraft</a>
+                
+                <!-- Theme Settings moved to footer -->
+                <div class="theme-settings">
+                    <div class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <div class="theme-panel">
+                        <h4>Theme Settings</h4>
+                        <div class="theme-option">
+                            <span>Dark Mode</span>
+                            <label class="switch">
+                                <input type="checkbox" id="darkModeToggle">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                        <div class="theme-colors">
+                            <h5>Colors</h5>
+                            <div class="color-options">
+                                <div class="color-option active" data-color="#2ecc71"></div>
+                                <div class="color-option" data-color="#3498db"></div>
+                                <div class="color-option" data-color="#9b59b6"></div>
+                                <div class="color-option" data-color="#e74c3c"></div>
+                                <div class="color-option" data-color="#f39c12"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Project Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="user_data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

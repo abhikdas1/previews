@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows 7 Portfolio | Template 7</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../assets/logo-nobg.png" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="theme.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="win7-loading" id="bootScreen">
+        <div class="win7-boot-logo">
+            <div class="win7-flag"></div>
+            <div class="win7-loading-dots">
+                <div class="win7-loading-dot"></div>
+                <div class="win7-loading-dot"></div>
+                <div class="win7-loading-dot"></div>
+                <div class="win7-loading-dot"></div>
+                <div class="win7-loading-dot"></div>
+            </div>
+        </div>
+        <div class="win7-boot-text">Microsoft Windows</div>
+        <div class="win7-copyright">© 2009 Microsoft Corporation. All rights reserved.</div>
+    </div>
+    
+    <!-- Desktop Environment -->
+    <div class="win7-desktop" id="desktop">
+        <!-- Desktop Icons -->
+        <div class="desktop-icons">
+            <div class="desktop-icon" data-window="computer">
+                <div class="icon-img">
+                    <i class="fas fa-computer"></i>
+                </div>
+                <div class="icon-text">Computer</div>
+            </div>
+            <div class="desktop-icon" data-window="about">
+                <div class="icon-img">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="icon-text">About Me</div>
+            </div>
+            <div class="desktop-icon" data-window="skills">
+                <div class="icon-img">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="icon-text">Skills</div>
+            </div>
+            <div class="desktop-icon" data-window="resume">
+                <div class="icon-img">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <div class="icon-text">Resume</div>
+            </div>
+            <div class="desktop-icon" data-window="projects">
+                <div class="icon-img">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="icon-text">Projects</div>
+            </div>
+            <div class="desktop-icon" data-window="services">
+                <div class="icon-img">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <div class="icon-text">Services</div>
+            </div>
+            <div class="desktop-icon" data-window="contact">
+                <div class="icon-img">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="icon-text">Contact</div>
+            </div>
+            <div class="desktop-icon" data-window="browser">
+                <div class="icon-img">
+                    <i class="fab fa-internet-explorer"></i>
+                </div>
+                <div class="icon-text">Internet Explorer</div>
+            </div>
+            <div class="desktop-icon" data-window="recycle">
+                <div class="icon-img">
+                    <i class="fas fa-trash-alt"></i>
+                </div>
+                <div class="icon-text">Recycle Bin</div>
+            </div>
+        </div>
+
+        <!-- Start Menu -->
+        <div class="start-menu" id="startMenu">
+            <div class="start-menu-header">
+                <img src="assets/avatar.jpg" alt="User" id="startMenuAvatar">
+                <div class="user-name" id="startMenuName">User Name</div>
+            </div>
+            <div class="start-menu-body">
+                <div class="start-menu-left">
+                    <div class="pinned-programs" id="pinnedPrograms">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="start-menu-right">
+                    <div class="computer-folder start-item" data-window="computer">
+                        <div class="start-icon">
+                            <img src="assets/computer.png" alt="Computer">
+                        </div>
+                        <div class="start-text">Computer</div>
+                    </div>
+                    <div class="control-panel start-item" data-window="settings">
+                        <div class="start-icon">
+                            <img src="assets/control-panel.png" alt="Control Panel">
+                        </div>
+                        <div class="start-text">Control Panel</div>
+                    </div>
+                    <div class="devices start-item">
+                        <div class="start-icon">
+                            <img src="assets/devices.png" alt="Devices">
+                        </div>
+                        <div class="start-text">Devices</div>
+                    </div>
+                    <div class="documents start-item">
+                        <div class="start-icon">
+                            <img src="assets/documents.png" alt="Documents">
+                        </div>
+                        <div class="start-text">Documents</div>
+                    </div>
+                    <div class="pictures start-item">
+                        <div class="start-icon">
+                            <img src="assets/pictures.png" alt="Pictures">
+                        </div>
+                        <div class="start-text">Pictures</div>
+                    </div>
+                    <div class="music start-item">
+                        <div class="start-icon">
+                            <img src="assets/music.png" alt="Music">
+                        </div>
+                        <div class="start-text">Music</div>
+                    </div>
+                    <div class="search-icon">
+                        <input type="text" placeholder="Search programs and files">
+                    </div>
+                </div>
+            </div>
+            <div class="start-menu-footer">
+                <div class="shutdown-btn" id="shutdownButton">
+                    <i class="fas fa-power-off"></i>
+                    <span>Shut down</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Windows Container -->
+        <div class="windows-container">
+            <!-- About Window -->
+            <div class="win7-window" id="about-window" data-name="about">
+                <div class="window-titlebar">
+                    <div class="window-title">
+                        <img src="assets/user.png" alt="About Me" class="titlebar-icon">
+                        About Me
+                    </div>
+                    <div class="window-controls">
+                        <button class="window-minimize"><span>_</span></button>
+                        <button class="window-maximize"><span>□</span></button>
+                        <button class="window-close"><span>×</span></button>
+                    </div>
+                </div>
+                <div class="window-menubar">
+                    <div class="menubar-item">File</div>
+                    <div class="menubar-item">Edit</div>
+                    <div class="menubar-item">View</div>
+                    <div class="menubar-item">Help</div>
+                </div>
+                <div class="window-content">
+                    <div class="about-container">
+                        <!-- Content populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="window-statusbar">
+                    <div class="statusbar-items">Ready</div>
+                </div>
+            </div>
+
+            <!-- Skills Window -->
+            <div class="win7-window" id="skills-window" data-name="skills">
+                <div class="window-titlebar">
+                    <div class="window-title">
+                        <img src="assets/skills.png" alt="Skills" class="titlebar-icon">
+                        Skills
+                    </div>
+                    <div class="window-controls">
+                        <button class="window-minimize"><span>_</span></button>
+                        <button class="window-maximize"><span>□</span></button>
+                        <button class="window-close"><span>×</span></button>
+                    </div>
+                </div>
+                <div class="window-menubar">
+                    <div class="menubar-item">File</div>
+                    <div class="menubar-item">Edit</div>
+                    <div class="menubar-item">View</div>
+                    <div class="menubar-item">Tools</div>
+                    <div class="menubar-item">Help</div>
+                </div>
+                <div class="window-content">
+                    <div class="skills-container">
+                        <div class="address-bar">
+                            <div class="address-buttons">
+                                <button class="address-button back"><span>←</span></button>
+                                <button class="address-button forward"><span>→</span></button>
+                                <button class="address-button up"><span>↑</span></button>
+                            </div>
+                            <div class="address-path">
+                                <img src="assets/skills.png" alt="Skills" class="address-icon">
+                                <span>Skills</span>
+                            </div>
+                            <div class="search-box">
+                                <input type="text" placeholder="Search Skills">
+                                <button class="search-button"><span>🔍</span></button>
+                            </div>
+                        </div>
+                        <div class="skills-view">
+                            <!-- Content populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+                <div class="window-statusbar">
+                    <div class="statusbar-items"><span id="skills-count">0</span> items</div>
+                </div>
+            </div>
+
+            <!-- Resume Window -->
+            <div class="win7-window" id="resume-window" data-name="resume">
+                <div class="window-titlebar">
+                    <div class="window-title">
+                        <img src="assets/resume.png" alt="Resume" class="titlebar-icon">
+                        Resume
+                    </div>
+                    <div class="window-controls">
+                        <button class="window-minimize"><span>_</span></button>
+                        <button class="window-maximize"><span>□</span></button>
+                        <button class="window-close"><span>×</span></button>
+                    </div>
+                </div>
+                <div class="window-menubar">
+                    <div class="menubar-item">File</div>
+                    <div class="menubar-item">Edit</div>
+                    <div class="menubar-item">View</div>
+                    <div class="menubar-item">Help</div>
+                </div>
+                <div class="window-content">
+                    <div class="resume-container">
+                        <div class="win7-sidebar">
+                            <div class="sidebar-item active" data-tab="experience">
+                                <img src="assets/experience.png" alt="Experience">
+                                <span>Experience</span>
+                            </div>
+                            <div class="sidebar-item" data-tab="education">
+                                <img src="assets/education.png" alt="Education">
+                                <span>Education</span>
+                            </div>
+                            <div class="sidebar-divider"></div>
+                            <div class="sidebar-item">
+                                <img src="assets/download.png" alt="Download">
+                                <span>Download CV</span>
+                            </div>
+                        </div>
+                        <div class="resume-content">
+                            <div class="resume-tab active" id="experience-tab">
+                                <!-- Experience content populated by JavaScript -->
+                            </div>
+                            <div class="resume-tab" id="education-tab">
+                                <!-- Education content populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="window-statusbar">
+                    <div class="statusbar-items">Ready</div>
+                </div>
+            </div>
+
+            <!-- Projects Window -->
+            <div class="win7-window" id="projects-window" data-name="projects">
+                <div class="window-titlebar">
+                    <div class="window-title">
+                        <img src="assets/projects.png" alt="Projects" class="titlebar-icon">
+                        Projects
+                    </div>
+                    <div class="window-controls">
+                        <button class="window-minimize"><span>_</span></button>
+                        <button class="window-maximize"><span>□</span></button>
+                        <button class="window-close"><span>×</span></button>
+                    </div>
+                </div>
+                <div class="window-menubar">
+                    <div class="menubar-item">File</div>
+                    <div class="menubar-item">Edit</div>
+                    <div class="menubar-item">View</div>
+                    <div class="menubar-item">Tools</div>
+                    <div class="menubar-item">Help</div>
+                </div>
+                <div class="window-content">
+                    <div class="projects-container">
+                        <div class="address-bar">
+                            <div class="address-buttons">
+                                <button class="address-button back"><span>←</span></button>
+                                <button class="address-button forward"><span>→</span></button>
+                                <button class="address-button up"><span>↑</span></button>
+                            </div>
+                            <div class="address-path">
+                                <img src="assets/projects.png" alt="Projects" class="address-icon">
+                                <span>Projects</span>
+                            </div>
+                            <div class="search-box">
+                                <input type="text" placeholder="Search Projects">
+                                <button class="search-button"><span>🔍</span></button>
+                            </div>
+                        </div>
+                        <div class="view-controls">
+                            <div class="view-options">
+                                <button class="view-option active" data-view="tiles">
+                                    <img src="assets/tiles.png" alt="Tiles View">
+                                </button>
+                                <button class="view-option" data-view="list">
+                                    <img src="assets/list.png" alt="List View">
+                                </button>
+                                <button class="view-option" data-view="details">
+                                    <img src="assets/details.png" alt="Details View">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="projects-view" id="projects-view">
+                            <!-- Content populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+                <div class="window-statusbar">
+                    <div class="statusbar-items"><span id="projects-count">0</span> items</div>
+                </div>
+            </div>
+
+            <!-- Services Window -->
+            <div class="win7-window" id="services-window" data-name="services">
+                <div class="window-titlebar">
+                    <div class="window-title">
+                        <img src="assets/services.png" alt="Services" class="titlebar-icon">
+                        Services
+                    </div>
+                    <div class="window-controls">
+                        <button class="window-minimize"><span>_</span></button>
+                        <button class="window-maximize"><span>□</span></button>
+                        <button class="window-close"><span>×</span></button>
+                    </div>
+                </div>
+                <div class="window-menubar">
+                    <div class="menubar-item">File</div>
+                    <div class="menubar-item">Edit</div>
+                    <div class="menubar-item">View</div>
+                    <div class="menubar-item">Help</div>
+                </div>
+                <div class="window-content">
+                    <div class="services-container">
+                        <div class="services-header">
+                            <h2>My Services</h2>
+                            <p>Professional services I offer to my clients</p>
+                        </div>
+                        <div class="services-grid" id="services-grid">
+                            <!-- Content populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+                <div class="window-statusbar">
+                    <div class="statusbar-items">Ready</div>
+                </div>
+            </div>
+
+            <!-- Contact Window -->
+            <div class="win7-window" id="contact-window" data-name="contact">
+                <div class="window-titlebar">
+                    <div class="window-title">
+                        <img src="assets/contact.png" alt="Contact" class="titlebar-icon">
+                        Contact
+                    </div>
+                    <div class="window-controls">
+                        <button class="window-minimize"><span>_</span></button>
+                        <button class="window-maximize"><span>□</span></button>
+                        <button class="window-close"><span>×</span></button>
+                    </div>
+                </div>
+                <div class="window-menubar">
+                    <div class="menubar-item">File</div>
+                    <div class="menubar-item">Edit</div>
+                    <div class="menubar-item">View</div>
+                    <div class="menubar-item">Help</div>
+                </div>
+                <div class="window-content">
+                    <div class="contact-container">
+                        <div class="contact-sidebar">
+                            <div class="contact-info">
+                                <h3>Contact Information</h3>
+                                <div class="contact-detail">
+                                    <img src="assets/email.png" alt="Email">
+                                    <div>
+                                        <label>Email:</label>
+                                        <span id="contact-email">email@example.com</span>
+                                    </div>
+                                </div>
+                                <div class="contact-detail">
+                                    <img src="assets/phone.png" alt="Phone">
+                                    <div>
+                                        <label>Phone:</label>
+                                        <span id="contact-phone">+1 234 567 890</span>
+                                    </div>
+                                </div>
+                                <div class="contact-detail">
+                                    <img src="assets/location.png" alt="Location">
+                                    <div>
+                                        <label>Location:</label>
+                                        <span id="contact-location">City, Country</span>
+                                    </div>
+                                </div>
+                                <div class="contact-social">
+                                    <h4>Follow me</h4>
+                                    <div class="social-icons" id="contact-social">
+                                        <!-- Populated by JavaScript -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-form-container">
+                            <h3>Send me a message</h3>
+                            <form id="contact-form" class="contact-form">
+                                <div class="form-group">
+                                    <label for="name">Name:</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Subject:</label>
+                                    <input type="text" id="subject" name="subject" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message:</label>
+                                    <textarea id="message" name="message" rows="5" required></textarea>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="win7-button primary">
+                                        <img src="assets/send.png" alt="Send">
+                                        <span>Send Message</span>
+                                    </button>
+                                    <button type="reset" class="win7-button">
+                                        <img src="assets/reset.png" alt="Reset">
+                                        <span>Reset</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="window-statusbar">
+                    <div class="statusbar-items">Ready</div>
+                </div>
+            </div>
+
+            <!-- Computer Window -->
+            <div class="win7-window" id="computer-window" data-name="computer">
+                <div class="window-titlebar">
+                    <div class="window-title">
+                        <img src="assets/computer.png" alt="Computer" class="titlebar-icon">
+                        Computer
+                    </div>
+                    <div class="window-controls">
+                        <button class="window-minimize"><span>_</span></button>
+                        <button class="window-maximize"><span>□</span></button>
+                        <button class="window-close"><span>×</span></button>
+                    </div>
+                </div>
+                <div class="window-menubar">
+                    <div class="menubar-item">File</div>
+                    <div class="menubar-item">Edit</div>
+                    <div class="menubar-item">View</div>
+                    <div class="menubar-item">Tools</div>
+                    <div class="menubar-item">Help</div>
+                </div>
+                <div class="window-content">
+                    <div class="computer-container">
+                        <div class="win7-sidebar">
+                            <div class="sidebar-section">
+                                <h4>Favorite Links</h4>
+                                <div class="sidebar-item">
+                                    <img src="assets/documents.png" alt="Documents">
+                                    <span>Documents</span>
+                                </div>
+                                <div class="sidebar-item">
+                                    <img src="assets/pictures.png" alt="Pictures">
+                                    <span>Pictures</span>
+                                </div>
+                                <div class="sidebar-item">
+                                    <img src="assets/music.png" alt="Music">
+                                    <span>Music</span>
+                                </div>
+                            </div>
+                            <div class="sidebar-divider"></div>
+                            <div class="sidebar-section">
+                                <h4>Computer</h4>
+                                <div class="sidebar-item">
+                                    <img src="assets/drive-c.png" alt="Local Disk (C:)">
+                                    <span>Local Disk (C:)</span>
+                                </div>
+                                <div class="sidebar-item">
+                                    <img src="assets/drive-d.png" alt="Data (D:)">
+                                    <span>Data (D:)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="computer-content">
+                            <div class="computer-header">
+                                <h3>Welcome to My Computer</h3>
+                                <p>Explore my portfolio using this Windows 7 experience.</p>
+                            </div>
+                            <div class="system-folders">
+                                <div class="system-folder" data-window="about">
+                                    <img src="assets/folder.png" alt="About Me">
+                                    <span>About Me</span>
+                                </div>
+                                <div class="system-folder" data-window="skills">
+                                    <img src="assets/folder.png" alt="Skills">
+                                    <span>Skills</span>
+                                </div>
+                                <div class="system-folder" data-window="resume">
+                                    <img src="assets/folder.png" alt="Resume">
+                                    <span>Resume</span>
+                                </div>
+                                <div class="system-folder" data-window="projects">
+                                    <img src="assets/folder.png" alt="Projects">
+                                    <span>Projects</span>
+                                </div>
+                                <div class="system-folder" data-window="services">
+                                    <img src="assets/folder.png" alt="Services">
+                                    <span>Services</span>
+                                </div>
+                                <div class="system-folder" data-window="contact">
+                                    <img src="assets/folder.png" alt="Contact">
+                                    <span>Contact</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="window-statusbar">
+                    <div class="statusbar-items">6 items</div>
+                </div>
+            </div>
+
+            <!-- Internet Explorer Window -->
+            <div class="win7-window" id="browser-window" data-name="browser">
+                <div class="window-titlebar">
+                    <div class="window-title">
+                        <img src="assets/ie.png" alt="Internet Explorer" class="titlebar-icon">
+                        Internet Explorer
+                    </div>
+                    <div class="window-controls">
+                        <button class="window-minimize"><span>_</span></button>
+                        <button class="window-maximize"><span>□</span></button>
+                        <button class="window-close"><span>×</span></button>
+                    </div>
+                </div>
+                <div class="window-menubar">
+                    <div class="menubar-item">File</div>
+                    <div class="menubar-item">Edit</div>
+                    <div class="menubar-item">View</div>
+                    <div class="menubar-item">Tools</div>
+                    <div class="menubar-item">Help</div>
+                </div>
+                <div class="window-content">
+                    <div class="browser-container">
+                        <div class="browser-toolbar">
+                            <div class="browser-buttons">
+                                <button class="browser-button" id="browser-back" title="Back">
+                                    <i class="fas fa-arrow-left"></i>
+                                </button>
+                                <button class="browser-button" id="browser-forward" title="Forward">
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                                <button class="browser-button" id="browser-refresh" title="Refresh">
+                                    <i class="fas fa-sync-alt"></i>
+                                </button>
+                                <button class="browser-button" id="browser-home" title="Home">
+                                    <i class="fas fa-home"></i>
+                                </button>
+                            </div>
+                            <form class="browser-address-bar" id="browser-form">
+                                <input type="text" class="browser-address" id="browser-address" placeholder="Enter web address">
+                                <button type="submit" class="browser-go" title="Go">
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="browser-frame-container">
+                            <iframe id="browser-frame" class="browser-frame" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+                            <div id="browser-loading" class="browser-loading">
+                                <div class="browser-spinner"></div>
+                                <div>Loading...</div>
+                            </div>
+                            <div id="browser-home-page" class="browser-home">
+                                <div class="browser-home-content">
+                                    <div class="browser-logo">
+                                        <img src="assets/ie-logo.png" alt="Internet Explorer">
+                                    </div>
+                                    <h2>Welcome to Internet Explorer</h2>
+                                    <div class="browser-search-container">
+                                        <form class="browser-search" id="browser-search-form">
+                                            <input type="text" id="browser-search-input" placeholder="Search the web">
+                                            <button type="submit">Search</button>
+                                        </form>
+                                    </div>
+                                    <div class="browser-favorites">
+                                        <h3>Favorite websites</h3>
+                                        <div class="browser-favorites-grid" id="browser-favorites">
+                                            <!-- Will be populated with favorites -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="window-statusbar">
+                    <div class="statusbar-items" id="browser-status">Ready</div>
+                </div>
+            </div>
+
+            <!-- Calendar Popup -->
+            <div class="calendar-popup" id="calendarPopup">
+                <div class="calendar-header">
+                    <button id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+                    <div id="currentMonthYear">February 2025</div>
+                    <button id="nextMonth"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="calendar-weekdays">
+                    <div>Su</div><div>Mo</div><div>Tu</div><div>We</div><div>Th</div><div>Fr</div><div>Sa</div>
+                </div>
+                <div class="calendar-days" id="calendarDays">
+                    <!-- Days will be filled by JavaScript -->
+                </div>
+            </div>
+
+            <!-- WiFi Popup -->
+            <div class="wifi-popup" id="wifiPopup">
+                <div class="wifi-popup-header">
+                    <h3>Network & Internet</h3>
+                </div>
+                <div class="wifi-toggle">
+                    <span>Wi-Fi</span>
+                    <label class="switch">
+                        <input type="checkbox" id="wifiToggleSwitch" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="wifi-networks">
+                    <div class="wifi-network-item connected">
+                        <div class="wifi-network-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <div class="wifi-network-info">
+                            <div class="wifi-network-name">Home Network</div>
+                            <div class="wifi-network-status">Connected, secured</div>
+                        </div>
+                    </div>
+                    <div class="wifi-network-item">
+                        <div class="wifi-network-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <div class="wifi-network-info">
+                            <div class="wifi-network-name">Office Network</div>
+                            <div class="wifi-network-status">Security: WPA2-PSK</div>
+                        </div>
+                    </div>
+                    <div class="wifi-network-item">
+                        <div class="wifi-network-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <div class="wifi-network-info">
+                            <div class="wifi-network-name">Public WiFi</div>
+                            <div class="wifi-network-status">Open network</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Taskbar -->
+        <div class="taskbar">
+            <div class="start-button" id="startButton">
+                <div class="start-orb">
+                    <img src="assets/start-orb.png" alt="Start">
+                </div>
+            </div>
+            <div class="taskbar-items" id="taskbarItems">
+                <!-- Populated by JavaScript -->
+            </div>
+            <div class="taskbar-tray">
+                <div class="show-desktop" id="showDesktop"></div>
+                <div class="tray-icons">
+                    <div class="tray-icon" id="volumeIcon">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <div class="tray-icon" id="networkIcon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                </div>
+                <div class="taskbar-time" id="taskbarTime">
+                    <div class="time">12:00 PM</div>
+                    <div class="date">1/1/2025</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="user_data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

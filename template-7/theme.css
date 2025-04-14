@@ -1,0 +1,85 @@
+:root {
+    /* Theme Colors */
+    --win7-blue: #0078d7;
+    --win7-blue-hover: #006cc9;
+    --win7-blue-active: #005bab;
+    --win7-accent: #0078d7;
+    
+    /* Base Colors */
+    --text-primary: #000000;
+    --text-secondary: #404040;
+    --text-white: #ffffff;
+    
+    /* Interface Elements */
+    --desktop-bg: #007cc2; /* Default Windows 7 desktop */
+    --window-bg: #ffffff;
+    --window-border: rgba(0, 120, 215, 0.8);
+    --titlebar-gradient-start: #e3f6fd;
+    --titlebar-gradient-mid: #c8e9f9;
+    --titlebar-gradient-end: #b9dff8;
+    --titlebar-active-gradient-start: #abe0fe;
+    --titlebar-active-gradient-mid: #74c6fd;
+    --titlebar-active-gradient-end: #42b1fc;
+    --taskbar-gradient-start: #f0f0f0;
+    --taskbar-gradient-end: #e3e3e3;
+    --glass-reflection: rgba(255, 255, 255, 0.3);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --glass-shadow: rgba(0, 0, 0, 0.3);
+    --startmenu-gradient-start: #e5effa;
+    --startmenu-gradient-end: #c7dff3;
+    
+    /* Component Elements */
+    --button-gradient-start: #f0f0f0;
+    --button-gradient-end: #e3e3e3;
+    --button-hover-gradient-start: #e3f6fd;
+    --button-hover-gradient-end: #b9dff8;
+    --button-active-gradient-start: #cce9fc;
+    --button-active-gradient-end: #9bd1fb;
+    --button-border: #adadad;
+    
+    /* Border Radius */
+    --border-radius: 3px;
+    
+    /* Shadow Effects */
+    --window-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    --aero-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    
+    /* Fonts */
+    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-size-normal: 12px;
+    
+    /* Sizing */
+    --taskbar-height: 40px;
+    --titlebar-height: 30px;
+    --menubar-height: 24px;
+    --statusbar-height: 24px;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    --desktop-bg: #202020;
+    --window-bg: #2d2d2d;
+    --text-primary: #ffffff;
+    --text-secondary: #c0c0c0;
+    --window-border: rgba(0, 95, 184, 0.8);
+    --titlebar-gradient-start: #404040;
+    --titlebar-gradient-mid: #383838;
+    --titlebar-gradient-end: #303030;
+    --titlebar-active-gradient-start: #274a6b;
+    --titlebar-active-gradient-mid: #1d3a5a;
+    --titlebar-active-gradient-end: #14294a;
+    --taskbar-gradient-start: #333333;
+    --taskbar-gradient-end: #252525;
+    --glass-reflection: rgba(255, 255, 255, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.25);
+    --startmenu-gradient-start: #222a35;
+    --startmenu-gradient-end: #1a2230;
+    
+    --button-gradient-start: #505050;
+    --button-gradient-end: #404040;
+    --button-hover-gradient-start: #585858;
+    --button-hover-gradient-end: #454545;
+    --button-active-gradient-start: #404040;
+    --button-active-gradient-end: #353535;
+    --button-border: #606060;
+}

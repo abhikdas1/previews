@@ -1,0 +1,63 @@
+:root {
+    /* Windows 10 Colors */
+    --win-blue: #0078d7;
+    --win-blue-hover: #106ebe;
+    --win-blue-active: #005a9e;
+    --win-accent: #0078d7;
+    
+    /* Background Colors */
+    --win-bg-light: #1da0c5;
+    --win-bg-dark: #202020;
+    --win-bg-window: #ffffff;
+    --win-bg-panel: #f0f0f0;
+    --win-bg-taskbar: #f0f0f0;
+    --win-bg-start: rgba(255, 255, 255, 0.95);
+    
+    /* Text Colors */
+    --win-text-dark: #000000;
+    --win-text-light: #ffffff;
+    --win-text-gray: #767676;
+    
+    /* Border Colors */
+    --win-border-light: #e6e6e6;
+    --win-border-dark: #999999;
+    
+    /* UI Elements */
+    --win-shadow: rgba(0, 0, 0, 0.1);
+    --win-titlebar: #ffffff;
+    --win-titlebar-active: #e6e6e6;
+    --win-scrollbar-track: #f0f0f0;
+    --win-scrollbar-thumb: #c1c1c1;
+    --win-scrollbar-hover: #a1a1a1;
+    
+    /* Typography */
+    --win-font: 'Segoe UI', sans-serif;
+}
+
+/* Dark Theme - for future implementation */
+[data-theme="dark"] {
+    --win-blue: #0078d7;
+    --win-blue-hover: #106ebe;
+    --win-blue-active: #005a9e;
+    
+    --win-bg-light: #202020;
+    --win-bg-dark: #000000;
+    --win-bg-window: #2d2d2d;
+    --win-bg-panel: #333333;
+    --win-bg-taskbar: #202020;
+    --win-bg-start: rgba(32, 32, 32, 0.95);
+    
+    --win-text-dark: #ffffff;
+    --win-text-light: #f0f0f0;
+    --win-text-gray: #a0a0a0;
+    
+    --win-border-light: #444444;
+    --win-border-dark: #555555;
+    
+    --win-shadow: rgba(0, 0, 0, 0.3);
+    --win-titlebar: #2d2d2d;
+    --win-titlebar-active: #3d3d3d;
+    --win-scrollbar-track: #333333;
+    --win-scrollbar-thumb: #555555;
+    --win-scrollbar-hover: #666666;
+}

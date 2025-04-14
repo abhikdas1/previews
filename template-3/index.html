@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk Portfolio | Template 3</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../assets/logo-nobg.png" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="theme.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="cyberpunk-theme">
+    <div class="grid-overlay"></div>
+    <div class="noise-overlay"></div>
+    
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="header-inner">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="#">
+                        <div class="logo" id="logo">
+                            <span class="logo-bracket">[</span>
+                            <span class="logo-text"></span>
+                            <span class="logo-bracket">]</span>
+                        </div>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarMain">
+                        <ul class="navbar-nav ms-auto" id="navLinks"></ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <!-- <div class="glitch-container">
+            <div class="glitch-text" data-text="PORTFOLIO">PORTFOLIO</div>
+        </div> -->
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="hero-content" data-aos="fade-right">
+                        <div class="hero-subtitle">
+                            <span class="badge" id="heroGreeting">INITIALIZED</span>
+                        </div>
+                        <h1 class="hero-title neon-text" id="heroName"></h1>
+                        <h2 class="hero-job" id="heroTitle"></h2>
+                        <div class="hero-description terminal-text">
+                            <span class="terminal-prompt">$</span>
+                            <span class="typewriter" id="heroDescription"></span>
+                            <span class="cursor">|</span>
+                        </div>
+                        <div class="hero-buttons mt-5">
+                            <a href="#contact" class="cyber-btn">
+                                <span class="cyber-btn-border"></span>
+                                <span class="cyber-btn-glitch"></span>
+                                <span class="cyber-btn-text">CONTACT.exe</span>
+                            </a>
+                            <a href="#portfolio" class="cyber-btn cyber-btn-outline">
+                                <span class="cyber-btn-border"></span>
+                                <span class="cyber-btn-glitch"></span>
+                                <span class="cyber-btn-text">PROJECTS.sys</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image-container" data-aos="fade-left">
+                        <div class="hero-image-wrapper">
+                            <div class="hero-image-glitch">
+                                <img src="" alt="Hero" id="heroImage" class="hero-image">
+                            </div>
+                        </div>
+                        <div class="image-scanner"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h6 class="section-subtitle"><span>01.</span> ABOUT</h6>
+                <h2 class="section-title" id="aboutTitle">SYSTEM STATUS</h2>
+                <div class="section-border"></div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <div class="about-image">
+                        <img id="aboutImage" src="" alt="About">
+                        <div class="about-frame"></div>
+                        <div class="about-scan"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="about-content">
+                        <div class="terminal">
+                            <div class="terminal-header">
+                                <div class="terminal-buttons">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="terminal-title">user_bio.txt</div>
+                            </div>
+                            <div class="terminal-body">
+                                <p id="aboutDescription"></p>
+                                <div class="about-data">
+                                    <ul class="data-list">
+                                        <li>
+                                            <span class="data-label">NAME:</span>
+                                            <span class="data-value" id="aboutName"></span>
+                                        </li>
+                                        <li>
+                                            <span class="data-label">LOCATION:</span>
+                                            <span class="data-value" id="aboutLocation"></span>
+                                        </li>
+                                        <li>
+                                            <span class="data-label">EMAIL:</span>
+                                            <span class="data-value" id="aboutEmail"></span>
+                                        </li>
+                                        <li>
+                                            <span class="data-label">EXPERIENCE:</span>
+                                            <span class="data-value" id="aboutExperience"></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a id="cvButton" href="#" class="cyber-btn">
+                                    <span class="cyber-btn-border"></span>
+                                    <span class="cyber-btn-glitch"></span>
+                                    <span class="cyber-btn-text">DOWNLOAD_CV.zip</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h6 class="section-subtitle"><span>02.</span> SKILLS</h6>
+                <h2 class="section-title">TECH UPGRADES</h2>
+                <div class="section-border"></div>
+            </div>
+            <div class="skills-grid" id="skillsList">
+                <!-- Skills will be loaded from user_data.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h6 class="section-subtitle"><span>03.</span> RESUME</h6>
+                <h2 class="section-title">EXP & EDU LOGS</h2>
+                <div class="section-border"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="resume-box">
+                        <div class="resume-header">
+                            <h3 class="resume-title">EXPERIENCE</h3>
+                        </div>
+                        <div class="resume-timeline" id="experienceList">
+                            <!-- Experience items will be loaded from user_data.js -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="resume-box">
+                        <div class="resume-header">
+                            <h3 class="resume-title">EDUCATION</h3>
+                        </div>
+                        <div class="resume-timeline" id="educationList">
+                            <!-- Education items will be loaded from user_data.js -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h6 class="section-subtitle"><span>04.</span> PORTFOLIO</h6>
+                <h2 class="section-title">PROJECT FILES</h2>
+                <div class="section-border"></div>
+            </div>
+            <div class="portfolio-filter" data-aos="fade-up">
+                <ul class="filter-list" id="portfolioFilters">
+                    <li class="active" data-filter="*">ALL</li>
+                    <!-- Portfolio filters will be loaded from user_data.js -->
+                </ul>
+            </div>
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- Portfolio items will be loaded from user_data.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h6 class="section-subtitle"><span>05.</span> SERVICES</h6>
+                <h2 class="section-title">SYSTEM MODULES</h2>
+                <div class="section-border"></div>
+            </div>
+            <div class="services-grid" id="servicesList">
+                <!-- Services will be loaded from user_data.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h6 class="section-subtitle"><span>06.</span> TESTIMONIALS</h6>
+                <h2 class="section-title">USER FEEDBACK</h2>
+                <div class="section-border"></div>
+            </div>
+            <div class="testimonials-slider" data-aos="fade-up">
+                <div class="testimonials-container" id="testimonialsList">
+                    <!-- Testimonials will be loaded from user_data.js -->
+                </div>
+                <div class="testimonial-controls">
+                    <button class="testimonial-prev">
+                        <i class="fas fa-angle-left"></i>
+                    </button>
+                    <button class="testimonial-next">
+                        <i class="fas fa-angle-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h6 class="section-subtitle"><span>07.</span> CONTACT</h6>
+                <h2 class="section-title">ESTABLISH CONNECTION</h2>
+                <div class="section-border"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+                    <div class="contact-info">
+                        <div class="terminal">
+                            <div class="terminal-header">
+                                <div class="terminal-buttons">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="terminal-title">contact_details.json</div>
+                            </div>
+                            <div class="terminal-body">
+                                <p id="contactDescription"></p>
+                                <ul class="contact-list">
+                                    <li>
+                                        <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+                                        <div class="contact-text">
+                                            <h5>LOCATION:</h5>
+                                            <p id="contactLocation"></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                                        <div class="contact-text">
+                                            <h5>EMAIL:</h5>
+                                            <p id="contactEmail"></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="contact-icon"><i class="fas fa-phone"></i></span>
+                                        <div class="contact-text">
+                                            <h5>PHONE:</h5>
+                                            <p id="contactPhone"></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="social-links" id="socialLinks">
+                                    <!-- Social links will be loaded from user_data.js -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="contact-form">
+                        <div class="terminal">
+                            <div class="terminal-header">
+                                <div class="terminal-buttons">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="terminal-title">new_message.exe</div>
+                            </div>
+                            <div class="terminal-body">
+                                <form id="contactForm">
+                                    <div class="form-group">
+                                        <label for="name">NAME:</label>
+                                        <input type="text" id="name" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">EMAIL:</label>
+                                        <input type="email" id="email" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="subject">SUBJECT:</label>
+                                        <input type="text" id="subject" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message">MESSAGE:</label>
+                                        <textarea id="message" class="form-control" rows="5" required></textarea>
+                                    </div>
+                                    <button type="submit" class="cyber-btn">
+                                        <span class="cyber-btn-border"></span>
+                                        <span class="cyber-btn-glitch"></span>
+                                        <span class="cyber-btn-text">TRANSMIT.send()</span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p id="footerCopyright"></p>
+                    <p>Template by <a href="https://profilecraft.live" target="_blank">ProfileCraft</a></p>
+                </div>
+                <div class="footer-icon">
+                    <div class="cyber-icon">
+                        <i class="fas fa-power-off"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="user_data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+:root {
+    /* Windows 11 Colors */
+    --win11-blue: #0078d4;
+    --win11-blue-hover: #106ebe;
+    --win11-blue-active: #005ba1;
+    
+    /* Theme Colors */
+    --theme-primary: var(--win11-blue);
+    --theme-primary-rgb: 0, 120, 212; /* Added RGB values */
+    --theme-secondary: #0d99ff;
+    --theme-secondary-rgb: 13, 153, 255; /* Added RGB values */
+    --theme-accent: #60cdff;
+    --theme-accent-rgb: 96, 205, 255; /* Added RGB values */
+    --theme-accent-light: #99ebff;
+    
+    /* Background Colors */
+    --bg-desktop: #ffffff;
+    --bg-window: rgba(255, 255, 255, 0.95);
+    --bg-panel: #f9f9f9;
+    --bg-menu: rgba(255, 255, 255, 0.97);
+    --bg-taskbar: rgba(243, 243, 243, 0.85);
+    
+    /* Text Colors */
+    --text-primary: #202020;
+    --text-secondary: #5f5f5f;
+    --text-muted: #888888;
+    --text-light: #ffffff;
+    
+    /* Border Colors */
+    --border-light: #e1e1e1;
+    --border-medium: #d1d1d1;
+    --border-dark: #b1b1b1;
+    
+    /* UI Elements */
+    --shadow-small: 0 2px 5px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 5px 15px rgba(0, 0, 0, 0.07);
+    --shadow-large: 0 10px 25px rgba(0, 0, 0, 0.10);
+    
+    --scrollbar-track: #f0f0f0;
+    --scrollbar-thumb: #cdcdcd;
+    --scrollbar-thumb-hover: #ababab;
+    
+    /* Typography */
+    --font-primary: 'Segoe UI', sans-serif;
+    --font-size-base: 14px;
+    
+    /* Sizing and Spacing */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    
+    --taskbar-height: 48px;
+    --window-titlebar-height: 32px;
+    
+    /* Transition */
+    --transition-short: 0.2s;
+    --transition-medium: 0.3s;
+    --transition-long: 0.5s;
+    
+    /* Other */
+    --backdrop-filter: blur(20px);
+}
+
+/* Dark Mode */
+body.dark-theme {
+    --win11-blue: #0078d4;
+    --win11-blue-hover: #1a86db;
+    --win11-blue-active: #2994e3;
+    
+    --theme-primary: var(--win11-blue);
+    --theme-primary-rgb: 0, 120, 212; /* Added RGB values */
+    --theme-secondary: #2b88d8;
+    --theme-secondary-rgb: 43, 136, 216; /* Added RGB values */
+    --theme-accent: #3aa0dd;
+    --theme-accent-rgb: 58, 160, 221; /* Added RGB values */
+    --theme-accent-light: #4db6ee;
+    
+    --bg-desktop: #202020;
+    --bg-window: rgba(32, 32, 32, 0.85);
+    --bg-panel: #2c2c2c;
+    --bg-menu: rgba(40, 40, 40, 0.97);
+    --bg-taskbar: rgba(32, 32, 32, 0.9);
+    
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --text-muted: #999999;
+    --text-light: #ffffff;
+    
+    --border-light: #444444;
+    --border-medium: #555555;
+    --border-dark: #666666;
+    
+    --shadow-small: 0 2px 5px rgba(0, 0, 0, 0.2);
+    --shadow-medium: 0 5px 15px rgba(0, 0, 0, 0.3);
+    --shadow-large: 0 10px 25px rgba(0, 0, 0, 0.4);
+    
+    --scrollbar-track: #2c2c2c;
+    --scrollbar-thumb: #444444;
+    --scrollbar-thumb-hover: #555555;
+}
+
+/* Accent Colors */
+body[data-accent="blue"] {
+    --theme-primary: #0078d4;
+    --theme-primary-rgb: 0, 120, 212;
+    --theme-secondary: #0d99ff;
+    --theme-secondary-rgb: 13, 153, 255;
+    --theme-accent: #60cdff;
+    --theme-accent-rgb: 96, 205, 255;
+    --theme-accent-light: #99ebff;
+}
+
+body[data-accent="green"] {
+    --theme-primary: #10893e;
+    --theme-primary-rgb: 16, 137, 62;
+    --theme-secondary: #14a64a;
+    --theme-secondary-rgb: 20, 166, 74;
+    --theme-accent: #4cd964;
+    --theme-accent-rgb: 76, 217, 100;
+    --theme-accent-light: #7df491;
+}
+
+body[data-accent="purple"] {
+    --theme-primary: #744da9;
+    --theme-primary-rgb: 116, 77, 169;
+    --theme-secondary: #8962b1;
+    --theme-secondary-rgb: 137, 98, 177;
+    --theme-accent: #a17ac5;
+    --theme-accent-rgb: 161, 122, 197;
+    --theme-accent-light: #c4a6db;
+}
+
+body[data-accent="pink"] {
+    --theme-primary: #c2185b;
+    --theme-primary-rgb: 194, 24, 91;
+    --theme-secondary: #e91e63;
+    --theme-secondary-rgb: 233, 30, 99;
+    --theme-accent: #f06292;
+    --theme-accent-rgb: 240, 98, 146;
+    --theme-accent-light: #f8bbd0;
+}
+
+body[data-accent="orange"] {
+    --theme-primary: #d24726;
+    --theme-primary-rgb: 210, 71, 38;
+    --theme-secondary: #ea5b3a;
+    --theme-secondary-rgb: 234, 91, 58;
+    --theme-accent: #f27d59;
+    --theme-accent-rgb: 242, 125, 89;
+    --theme-accent-light: #f7a289;
+}

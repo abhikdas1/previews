@@ -1,0 +1,61 @@
+:root {
+    /* Primary Colors */
+    --primary: #0ff0fc;
+    --primary-rgb: 15, 240, 252;
+    --primary-dark: #00b8c2;
+    --primary-light: #8cf7fc;
+    
+    /* Secondary Colors */
+    --secondary: #ff00a0;
+    --secondary-rgb: 255, 0, 160;
+    --secondary-dark: #c6007c;
+    --secondary-light: #ff66c4;
+    
+    /* Accent Colors */
+    --accent: #ffec00;
+    --accent-rgb: 255, 236, 0;
+    
+    /* Background Colors */
+    --bg-dark: #0a0a16;
+    --bg-dark-2: #13132b;
+    --bg-medium: #1a1a3a;
+    --bg-light: #262654;
+    
+    /* Text Colors */
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --text-muted: #8e8ecc;
+    
+    /* Button Colors */
+    --button-bg: #0a0a16;
+    --button-border: #0ff0fc;
+    --button-text: #0ff0fc;
+    --button-hover: #0ff0fc;
+    --button-hover-text: #0a0a16;
+    
+    /* Border Colors */
+    --border-color: #0ff0fc;
+    --border-light: rgba(15, 240, 252, 0.2);
+    
+    /* Form Controls */
+    --input-bg: rgba(26, 26, 58, 0.8);
+    --input-border: #0ff0fc;
+    --input-text: #ffffff;
+    --input-focus: #0ff0fc;
+    
+    /* Success, Error Colors */
+    --success: #00ff4c;
+    --error: #ff003c;
+    --warning: #ffec00;
+    
+    /* Special FX Colors */
+    --glow-primary: rgba(15, 240, 252, 0.7);
+    --glow-secondary: rgba(255, 0, 160, 0.7);
+    --shadow-primary: rgba(15, 240, 252, 0.3);
+    --shadow-secondary: rgba(255, 0, 160, 0.3);
+    
+    /* Typography */
+    --font-primary: 'Rajdhani', sans-serif;
+    --font-secondary: 'Orbitron', sans-serif;
+    --font-size-base: 16px;
+}
